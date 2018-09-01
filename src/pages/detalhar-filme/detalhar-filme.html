@@ -1,0 +1,29 @@
+<!--
+  Generated template for the DetalharFilmePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>DetalharFilme</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!-- *ngFor="let filme of movieDetail" *ngIf="movieDetail != undefined" -->
+<ion-content padding>
+    <ion-card >
+        <img *ngIf="movieDetail != undefined" [src]= "movieDetail.Poster">
+        <ion-item>
+          <h2 *ngIf="movieDetail != undefined">{{movieDetail.Title}}</h2>
+          <p *ngIf="movieDetail != undefined">{{movieDetail.Year}}</p>
+        </ion-item>
+                  
+        <ion-card-content>
+          <p class="mypstyle" *ngIf="movieDetail != undefined">{{movieDetail.Plot}}</p>
+        </ion-card-content>
+      
+      </ion-card>
+</ion-content>

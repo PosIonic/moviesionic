@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-searchbar (ionInput)="getMovies($event)"></ion-searchbar>
+    <ion-card *ngFor="let movie of moviesList">
+<!--         <ion-avatar item-start>
+            <img [src]=movie.Poster round>
+        </ion-avatar> -->
+        <ion-item (click)="itemSelected(movie.imdbID)">
+            <ion-avatar item-start>
+                <img [src]=movie.Poster round>
+            </ion-avatar>
+          <h2>{{movie.Title}}</h2>
+          <p>{{movie.Year}}</p>
+        </ion-item>
+      
+      </ion-card>
+</ion-content>
