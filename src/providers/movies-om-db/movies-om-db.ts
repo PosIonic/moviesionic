@@ -11,7 +11,7 @@ import { Http } from '@angular/http';
 @Injectable()
 export class MoviesOmDbProvider {
 
-  public api_key: string = 'apikey=b446ef61'
+  public api_key: string = 'apikey=SUA_CHAVE_AQUI'
   public api_url: string = 'http://www.omdbapi.com/?';
 
   getMovies(movietitle) {
